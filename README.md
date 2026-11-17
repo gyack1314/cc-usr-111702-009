@@ -11,3 +11,5 @@ Python 3.11 以上；在项目根目录执行：
     python -m capture_service.cli inspect data/normal.json
 
 Dockerfile 提供 Linux 环境；docker build -t evidence-bundle . 构建，docker run --rm evidence-bundle 运行样例。
+
+样例只收到了包头范围描述和声明的成员目录，没有真实 ZIP 字节。

@@ -16,7 +16,7 @@ def decode(raw,receipt):
 def assess(rows):
     bundles={r['id']:r for r in rows if r['type']=='bundle'}
     indexes=[r for r in rows if r['type']=='index']
-    reasons=[]
+    reasons=['包体字节尚未核验']
     for index in indexes:
         if index['id'] not in bundles:reasons.append('缺少包体:'+index['id'])
         for member in index['payload']['members']:
