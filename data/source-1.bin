@@ -1,0 +1,16 @@
+{
+  "bundle": "A-7",
+  "revision": "r1",
+  "body_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+  "bytes": 2048,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 1024
+    },
+    {
+      "start": 1024,
+      "end": 2048
+    }
+  ]
+}

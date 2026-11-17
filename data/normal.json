@@ -1,0 +1,33 @@
+{
+  "allowed_origins": [
+    "https://files.example.test"
+  ],
+  "steps": [
+    {
+      "request": {
+        "method": "GET",
+        "url": "https://files.example.test/bundles/A-7",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "response": {
+        "file": "source-1.bin",
+        "status": 200,
+        "bytes": 262,
+        "sha256": "fbca7e399a1dcd8dd27c2c30284579e97b8dd66391180c1fcecd1182d706e020"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "https://files.example.test/bundles/A-7/index",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "response": {
+        "file": "source-2.bin",
+        "status": 200,
+        "bytes": 260,
+        "sha256": "8f95eba274a4778163ddbd79a6d31f1688b8e77877529eec7208e7c94f1727e8"
+      }
+    }
+  ]
+}
