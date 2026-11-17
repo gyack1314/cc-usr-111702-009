@@ -1,0 +1,18 @@
+{
+  "bundle": "B-9",
+  "revision": "r1",
+  "notice": "notice-27",
+  "lot": "LOT-2026-001",
+  "references": [
+    {
+      "path": "reports/R-17.pdf",
+      "sha256": "f6e61f18db6fab54e47de25b9beec229ba312117da8967f304810146055ec126",
+      "pages": 8
+    },
+    {
+      "path": "reports/R-18.pdf",
+      "sha256": "ce0467c8dedb1806ebc2e51ed2e95cf5e034a2a14eb57223a7fc11f469df6c5e",
+      "pages": 12
+    }
+  ]
+}

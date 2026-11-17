@@ -1,0 +1,54 @@
+{
+  "allowed_origins": [
+    "https://files.example.test"
+  ],
+  "steps": [
+    {
+      "request": {
+        "method": "GET",
+        "url": "https://files.example.test/bundles/B-13/head",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "response": {
+        "file": "00-head.bin",
+        "status": 200,
+        "bytes": 209,
+        "sha256": "08390f41707ea4a9a59f64d75b0ab767d226dd507108d29643c38154915a7e58"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "https://files.example.test/bundles/B-13/body",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "range": "bytes=0-218"
+      },
+      "response": {
+        "file": "01-body.bin",
+        "status": 206,
+        "bytes": 219,
+        "sha256": "a88fca4a73648aedb000c205bdcd11aa7a53d1d1fa1e7b468256a42d2e9d2852",
+        "headers": {
+          "Content-Range": "bytes 0-218/439"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "https://files.example.test/bundles/B-13/body",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "range": "bytes=0-218"
+      },
+      "response": {
+        "file": "02-body.bin",
+        "status": 206,
+        "bytes": 219,
+        "sha256": "3a7ba224ff3084c34538909cc14cd7748c8fb1e95191731430f845f2d2f81691",
+        "headers": {
+          "Content-Range": "bytes 0-218/439"
+        }
+      }
+    }
+  ]
+}

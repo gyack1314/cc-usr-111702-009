@@ -1,0 +1,97 @@
+{
+  "allowed_origins": [
+    "https://files.example.test"
+  ],
+  "steps": [
+    {
+      "request": {
+        "method": "GET",
+        "url": "https://files.example.test/bundles/B-9/head",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "response": {
+        "file": "00-head.bin",
+        "status": 200,
+        "bytes": 208,
+        "sha256": "7d6e473db7b8ac089dc5655ce03f23887e1d2a9f7926b8541cde6cfae64c1105"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "https://files.example.test/bundles/B-9/body",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "range": "bytes=0-286"
+      },
+      "response": {
+        "file": "01-body.bin",
+        "status": 206,
+        "bytes": 287,
+        "sha256": "365520adbd3956b3f3f56d0642f258b02c60257f019df4acbcc5e8bcb8d0d176",
+        "headers": {
+          "Content-Range": "bytes 0-286/863"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "https://files.example.test/bundles/B-9/body",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "range": "bytes=287-574"
+      },
+      "response": {
+        "file": "02-body.bin",
+        "status": 206,
+        "bytes": 288,
+        "sha256": "48f4dd3680fb432dce94e59b4218570a53be1ddcff03c0311cfcbcdbbb93fb67",
+        "headers": {
+          "Content-Range": "bytes 287-574/863"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "https://files.example.test/bundles/B-9/body",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "range": "bytes=575-862"
+      },
+      "response": {
+        "file": "03-body.bin",
+        "status": 206,
+        "bytes": 288,
+        "sha256": "862803cf4c43f38395675756539ca072f903eeeb37fb479277800ac2f4cdd40d",
+        "headers": {
+          "Content-Range": "bytes 575-862/863"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "https://files.example.test/bundles/B-9/index",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "response": {
+        "file": "04-index.bin",
+        "status": 200,
+        "bytes": 497,
+        "sha256": "606e8dcf5f9ea4fdcb07d84f49a4f417613e0a29ba8ef6a73a905d2bd7bbce0c"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "https://files.example.test/bundles/B-9/notice",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "response": {
+        "file": "05-notice.bin",
+        "status": 200,
+        "bytes": 410,
+        "sha256": "07922d5b6fb8285d2803d2c16f9c9da91ef4226dbd62e8924611666a1d6ae9b8"
+      }
+    }
+  ]
+}

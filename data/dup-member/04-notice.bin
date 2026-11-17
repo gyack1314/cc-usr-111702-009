@@ -1,0 +1,13 @@
+{
+  "bundle": "B-10",
+  "revision": "r1",
+  "notice": "notice-31",
+  "lot": "LOT-2026-002",
+  "references": [
+    {
+      "path": "reports/R-20.pdf",
+      "sha256": "b75372be3b40817e7bd71963de196e52bec1aa7a4bd3b91ffa176e62c50d8c25",
+      "pages": 4
+    }
+  ]
+}

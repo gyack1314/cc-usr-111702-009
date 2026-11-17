@@ -1,0 +1,80 @@
+{
+  "allowed_origins": [
+    "https://files.example.test"
+  ],
+  "steps": [
+    {
+      "request": {
+        "method": "GET",
+        "url": "https://files.example.test/bundles/B-15/head",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "response": {
+        "file": "00-head.bin",
+        "status": 200,
+        "bytes": 209,
+        "sha256": "883a98a018a537d0c2e27ccd35846d235a6d4c4bc19af4c099f5e7bed1e9b0a4"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "https://files.example.test/bundles/B-15/body",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "range": "bytes=0-221"
+      },
+      "response": {
+        "file": "01-body.bin",
+        "status": 206,
+        "bytes": 222,
+        "sha256": "b02c22bb51b251165a756757d5f368a7bb684b6a1e3e980d55583393e146f3cd",
+        "headers": {
+          "Content-Range": "bytes 0-221/445"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "https://files.example.test/bundles/B-15/body",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "range": "bytes=222-444"
+      },
+      "response": {
+        "file": "02-body.bin",
+        "status": 206,
+        "bytes": 223,
+        "sha256": "4052dbc9fb5c3f6748af54e860abe44bce963b50b6ac59467579a0aab9522b5c",
+        "headers": {
+          "Content-Range": "bytes 222-444/445"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "https://files.example.test/bundles/B-15/index",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "response": {
+        "file": "03-index.bin",
+        "status": 200,
+        "bytes": 304,
+        "sha256": "205dcffa8fddc3feda061abe05e3ebe4765f398fa36a46dcab637cdedb6946f4"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "https://files.example.test/bundles/B-15/notice",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "response": {
+        "file": "04-notice.bin",
+        "status": 200,
+        "bytes": 265,
+        "sha256": "3807deadeec5e022a990ad8b081c229d7fd2a6bfc456d94ac626b3610d4f89d4"
+      }
+    }
+  ]
+}

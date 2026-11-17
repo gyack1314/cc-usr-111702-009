@@ -1,0 +1,22 @@
+{
+  "bundle": "B-11",
+  "revision": "r1",
+  "notice": "notice-33",
+  "members": [
+    {
+      "path": "reports/R-21.pdf",
+      "bytes": 542,
+      "sha256": "adb32e424ecacc1772fda243ebecd19b8df432fcbdd9d7f1421cabb9c4a73ecf",
+      "verified": false,
+      "pages": 3
+    },
+    {
+      "path": "../evil.bin",
+      "bytes": 3,
+      "sha256": "e0af3d118bcd6f56105b722639793e20212f5d24abc099286625fc72a24f3c9b",
+      "verified": false,
+      "pages": 1
+    }
+  ],
+  "lot": "LOT-2026-003"
+}

@@ -1,0 +1,15 @@
+{
+  "bundle": "B-14",
+  "revision": "r1",
+  "notice": "notice-42",
+  "members": [
+    {
+      "path": "reports/R-41.pdf",
+      "bytes": 549,
+      "sha256": "92040269628cea74050ba23194cb67ac04dd8366f72896d0e03188a2580954ca",
+      "verified": false,
+      "pages": 2
+    }
+  ],
+  "lot": "LOT-2026-006"
+}

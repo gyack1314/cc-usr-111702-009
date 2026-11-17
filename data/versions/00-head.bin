@@ -1,0 +1,12 @@
+{
+  "bundle": "B-12",
+  "revision": "r1",
+  "body_sha256": "e14b39367e62386521847f36893e9cfe9aee6575a8c64c38bcf06521c5436fbc",
+  "bytes": 435,
+  "ranges": [
+    {
+      "start": 0,
+      "end": 435
+    }
+  ]
+}

@@ -22,8 +22,18 @@ def connect(path):
     c.executescript(SCHEMA)
     return c
 
-def receive(c, collection, raw, receipt):
-    if receipt['status']!=200:raise ValueError('来源响应非成功正文')
+def receive_receipt(c, collection, raw, receipt, allowed_statuses=(206,)):
+    """只登记原始收据（如二进制 ZIP 分片），不做领域 JSON 解释。"""
+    if receipt['status'] not in allowed_statuses:raise ValueError('来源响应非成功正文')
+    digest=hashlib.sha256(raw).hexdigest()
+    if digest!=receipt['body_sha256']:raise ValueError('响应收据与原文不一致')
+    with c:
+        c.execute('INSERT OR IGNORE INTO receipts VALUES(?,?,?,?,?)',
+                  (collection,digest,receipt['url'],receipt['status'],raw))
+    return digest
+
+def receive(c, collection, raw, receipt, allowed_statuses=(200,)):
+    if receipt['status'] not in allowed_statuses:raise ValueError('来源响应非成功正文')
     digest=hashlib.sha256(raw).hexdigest()
     if digest!=receipt['body_sha256']:raise ValueError('响应收据与原文不一致')
     rows=decode(raw,receipt)
